@@ -1,5 +1,6 @@
 using Chromium_Profile_Manager.Utils;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
@@ -303,7 +304,9 @@ namespace Chromium_Profile_Manager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Credits credits = new Credits("This program was made to manage Chromium and browser profiles for Putra3340 Software that uses Puppeteer/WebView and was meant to integrate Putra3340 software. It can also be used as standalone software to manage Chromium.");
+            credits.Show();
+            credits.Focus();
         }
 
         private void reset_button_Click(object sender, EventArgs e)
@@ -449,6 +452,30 @@ namespace Chromium_Profile_Manager
                 return;
             SaveLocalConfig();
             this.Close();
+        }
+
+        private void navigatechrome_btn_Click(object sender, EventArgs e)
+        {
+            if (chrome_tbx.Text != "")
+            {
+                Process.Start("explorer.exe", chrome_tbx.Text.Replace("chrome.exe", ""));
+            }
+            else
+            {
+                Process.Start("explorer.exe", GlobalChromePath);
+            }
+        }
+
+        private void navigateprofile_btn_Click(object sender, EventArgs e)
+        {
+            if(profile_tbx.Text != "")
+            {
+                Process.Start("explorer.exe", profile_tbx.Text);
+            }
+            else
+            {
+                Process.Start("explorer.exe", GlobalChromePath);
+            }
         }
     }
     public class ChromeProfile

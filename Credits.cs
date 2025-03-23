@@ -13,13 +13,15 @@ namespace Chromium_Profile_Manager
 {
     public partial class Credits : Form
     {
-        public Credits()
+        public static string CreditsDescription = "This software is made by PutraRTX. You can visit my website at https://putrartx.my.id";
+        public Credits(string description)
         {
             InitializeComponent();
             Assembly assembly = Assembly.GetExecutingAssembly(); // Or specify another assembly
             AssemblyName assemblyName = assembly.GetName();
             label3.Text = assemblyName.Name;
             label4.Text = assemblyName.Version.ToString();
+            label2.Text = description;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -35,6 +35,8 @@
             chromebrowse_btn = new Button();
             chromeversion_gridview = new DataGridView();
             groupBox1 = new GroupBox();
+            navigateprofile_btn = new Button();
+            navigatechrome_btn = new Button();
             label3 = new Label();
             label2 = new Label();
             reset_button = new Button();
@@ -123,6 +125,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(navigateprofile_btn);
+            groupBox1.Controls.Add(navigatechrome_btn);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(reset_button);
@@ -139,6 +143,26 @@
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Current App Configuration";
+            // 
+            // navigateprofile_btn
+            // 
+            navigateprofile_btn.Location = new Point(22, 258);
+            navigateprofile_btn.Name = "navigateprofile_btn";
+            navigateprofile_btn.Size = new Size(172, 23);
+            navigateprofile_btn.TabIndex = 12;
+            navigateprofile_btn.Text = "Open Profile Directory";
+            navigateprofile_btn.UseVisualStyleBackColor = true;
+            navigateprofile_btn.Click += navigateprofile_btn_Click;
+            // 
+            // navigatechrome_btn
+            // 
+            navigatechrome_btn.Location = new Point(22, 227);
+            navigatechrome_btn.Name = "navigatechrome_btn";
+            navigatechrome_btn.Size = new Size(172, 23);
+            navigatechrome_btn.TabIndex = 11;
+            navigatechrome_btn.Text = "Open Chromium Directory";
+            navigatechrome_btn.UseVisualStyleBackColor = true;
+            navigatechrome_btn.Click += navigatechrome_btn_Click;
             // 
             // label3
             // 
@@ -412,5 +436,7 @@
         private Button renameprofile_btn;
         private Button addprofile_btn;
         private Label label3;
+        private Button navigatechrome_btn;
+        private Button navigateprofile_btn;
     }
 }

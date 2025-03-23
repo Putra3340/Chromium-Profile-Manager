@@ -89,12 +89,12 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Currently Not Available" });
             comboBox1.Location = new Point(42, 293);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(259, 23);
             comboBox1.TabIndex = 5;
-            comboBox1.Text = "Not Available Right Now!!";
+            comboBox1.Text = "Select a Version";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
